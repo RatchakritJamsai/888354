@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+
+		<script>
+
+			function Search() {
+			    var test_area = document.getElementById("text").value;
+			    var res = test_area.split(" ");
+			    var check = document.getElementById("word").value;
+			    var sum =0;
+			  	var ratio_ch = document.querySelector("input[name='radio']:checked").value; 
+
+
+				for (var i = 0; i < res.length; i++) 
+				{
+			    	
+			    	if (ratio_ch == "no") {
+	                    res[i] = res[i].toLowerCase();
+	                    check = check.toLowerCase();
+                	}
+
+			    	if(res[i].search(check) > -1 )
+			    	{
+
+			    		sum++ ;
+			    	}
+			    }    
+
+				document.getElementById("total").innerHTML = sum;
+
+			}
+
+			
+			
+
+		</script>
+
+		<center>
+
+				<div class="form-group">
+
+					Text input : <textarea id="text"></textarea>
+				
+				</div>
+			<br>
+				<div class="form-group">
+					Sensitive Case : 					
+					<input type="radio" name="radio" value="yes">Yes
+					<input type="radio" name="radio" value="no">No	
+				<div>
+			<br>
+				<div class="form-group">
+
+					Search : <input type="text" id="word" value="">
+				
+				</div>
+
+			<br>
+				<div class="form-group">
+					<button onclick="Search()" > search </button>
+				</div>
+			<br>
+
+			Result for Search : <p id="total"></p>
+
+		</center>
+
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
