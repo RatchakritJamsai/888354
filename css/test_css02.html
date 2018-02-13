@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+	div#head{
+		perspective: 20px
+
+	}
+
+	div#sub{
+	    width: 200px;
+	    height: 100px;
+	    background-color: yellow;
+	   	border: 1px solid black;
+	    transform: translate(400px,300px) rotateX(16deg) scale(2,1) skewX(20deg) ;
+
+
+	}
+
+	div#tran{	
+		width: 100px;
+		height: 100px;
+		background: red;
+		transition: width 2s ,opacity 3s ,background 2s ;
+	}
+
+	div#tran:hover{
+		width: 300px ;
+		opacity : 0.3;
+		background: blue ;
+		
+	}
+
+
+	@keyframes anime-test{
+		 0%   {top: 0px; left: 0px; background: red;}
+	    25%  {top: 0px; left: 100px; background: blue; }
+	    50%  {top: 100px; left: 100px; background: yellow; }
+	    75%  {top: 100px; left: 0px; background: green; }
+	    100% {top: 0px; left: 0px; background: red ; border-radius: 50px}
+	}
+
+	div#anime{
+		width: 100px;
+		height: 100px;
+		background: pink;
+		transform: translate(10px,370px);
+		animation-name: anime-test;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		position: relative;
+		 transform: translate(800px,50px)
+	}
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+<div id="head" >
+	<div id="sub">	
+		test_css02	
+	</div>
+</div>
+
+<br>
+<div id="tran">
+	
+</div>
+<div id="anime">
+	
+</div>
+
+
+</body>
+</html>
